@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MEAN stack App</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet">
+
+        <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
+        <link rel="stylesheet" href="../assets/css/style.css">
+        <link rel="stylesheet" href="../assets/css/theme.css">  
+
+    </head>
+    <body ng-app="myApp">
+        <!-- MAIN CONTENT -->
+        <div class="container-fluid fullh" ng-controller="myAppController">
+            <!--<header ng-include="'public/app/modules/common/header.html'" class="head"></header>-->
+            <div ui-view class="fullh"><div class="loader"></div></div>
+        </div>
+        <div class="loader" ng-show="$root.showLoader"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+
+        <script src="bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="bower_components/angular/angular.min.js"></script>
+        <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="bower_components/angular-messages/angular-messages.min.js"></script>
+        <script src="bower_components/angular-socket-io/socket.js"></script> 
+
+        <script src="public/app/modules/common/services/userServices.js"></script>
+        <script src="public/app/modules/common/services/socketFactory.js"></script>
+        <script src="public/app/modules/common/router/route.js"></script>
+        <script src="../assets/js/app.js"></script>
+
+    </body>
+</html>

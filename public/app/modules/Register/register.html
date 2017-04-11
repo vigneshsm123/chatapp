@@ -1,0 +1,66 @@
+<div class="full-height">   
+    <div class="center-wrapper" >
+        <div class="center-content">
+            <div class="row no-margin">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                    <form role="form" class="form-layout ng-pristine ng-valid" name="registerForm" ng-submit="registerUser(registerForm.$valid, regformData)" novalidate>
+                        <div class="text-center mb15"> <h1> Sign Up</h1> </div>
+                        <p class="text-center mb30 ng-binding">Please sign up to your account</p>
+                        <div class="form-inputs"> 
+                            <input 
+                                type="email" 
+                                class="form-control input-lg" 
+                                placeholder="Email Address" 
+                                ng-model="regformData.email"
+                                name="username"
+                                minlength="10" 
+                                maxlength="100" 
+                                ng-pattern="/^.+@.+\..+$/" 
+                                required>
+                            <div class="text-danger val-msg" ng-show="!registerForm.username.$pristine || registerForm.$submitted" ng-messages="registerForm.username.$error " role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Please enter an valid email address. {{user.username}}
+                                </div>
+                            </div> 
+                            
+                            <input 
+                                type="password" 
+                                name="password"
+                                minlength="8" 
+                                maxlength="20" 
+                                ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" 
+                                class="form-control input-lg" 
+                                placeholder="Password" 
+                                ng-model="regformData.password" 
+                                required>
+                            <div class="text-danger val-msg" ng-show="!registerForm.password.$pristine || registerForm.$submitted" ng-messages="registerForm.password.$error" role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Please enter password between 8-20 characters (one uppercase, number and special character)
+                                </div>
+                            </div>
+
+                            <input 
+                                type="password" 
+                                name="confirmPassword"
+                                class="form-control input-lg" 
+                                placeholder="Confirm Password" 
+                                ng-model="regformData.cnfPassword"
+                                minlength="8" 
+                                maxlength="20"
+                                ng-pattern="regformData.password"
+                                data-password-verify="user.password" 
+                                required> 
+                            </div>
+                            <div class="text-danger val-msg" ng-show="!registerForm.confirmPassword.$pristine || registerForm.$submitted" ng-messages="registerForm.confirmPassword.$error" role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Passwords are not matched.
+                                </div>
+                            </div>
+                        <button class="btn btn-success btn-block btn-lg mb15 btn-signin" type="submit"> <span>Register</span> </button> 
+                        <p> <a ui-sref="login" href="#/login">Go to Sign in page</a></p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

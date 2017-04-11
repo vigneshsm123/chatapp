@@ -1,0 +1,52 @@
+<div class="full-height">   
+    <div class="center-wrapper" >
+        <div class="center-content">
+            <div class="row no-margin">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-6 col-sm-offset-3 col-md-4 col-md-offset-4">
+                    <form role="form" class="form-layout ng-pristine ng-valid" name="loginForm" ng-submit="login(loginForm.$valid, loginData)" novalidate>
+                    <div class="text-center mb15"> <h1> MEAN  APP - LOGIN</h1> </div>
+                    <p class="text-center mb30 ng-binding">Welcome to Urban. Please sign in to your account</p>
+                    <div class="form-inputs"> 
+                        <input 
+                                type="email" 
+                                class="form-control input-lg" 
+                                placeholder="Email Address" 
+                                ng-model="loginData.email"
+                                name="username"
+                                minlength="10" 
+                                maxlength="100" 
+                                ng-pattern="/^.+@.+\..+$/" 
+                                required>
+                            <div class="text-danger val-msg" ng-show="!loginForm.username.$pristine || loginForm.$submitted" ng-messages="loginForm.username.$error " role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Please enter an valid email address.
+                                </div>
+                            </div> 
+                            
+                            <input 
+                                type="password" 
+                                name="password"
+                                minlength="8" 
+                                maxlength="20" 
+                                ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" 
+                                class="form-control input-lg" 
+                                placeholder="Password" 
+                                ng-model="loginData.password" 
+                                required>
+                            <div class="text-danger val-msg" ng-show="!loginForm.password.$pristine || loginForm.$submitted" ng-messages="loginForm.password.$error" role="alert">
+                                <div ng-message-exp="['required', 'minlength', 'maxlength', 'pattern']">
+                                    Please enter valid password.
+                                </div>
+                            </div>
+                        </div>
+                    <button class="btn btn-success btn-block btn-lg mb15 btn-signin" type="submit"> <span>Sign in</span> </button> 
+                    <p> <a ui-sref="register" href="#/register">Create an account</a> · <a ui-sref="register">Forgot your password?</a> </p>
+                    </form>
+                    <div ng-show="loginData.res" class="alert text-center" ng-class="'alert-'+ loginData.res.alert">
+                        <strong >{{loginData.res.txStatus | uppercase}}!</strong>&nbsp;&nbsp; {{loginData.res.message}}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

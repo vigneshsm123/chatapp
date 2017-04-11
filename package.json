@@ -1,0 +1,23 @@
+{
+  "name": "meanapp",
+  "version": "1.0.0",
+  "description": "mean stack application",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prestart": "npm install",
+    "postinstall": "bower install",
+    "start": "node server.js"
+  },
+  "author": "vignesh",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
+    "body-parser": "^1.17.1",
+    "bower": "^1.8.0",
+    "express": "^4.15.2",
+    "jsonwebtoken": "^7.3.0",
+    "mongoose": "^4.9.0",
+    "socket.io": "^1.7.3"
+  }
+}

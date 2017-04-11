@@ -1,0 +1,80 @@
+.head{
+    background-color: #000;
+    margin: 0px;
+    color: white;
+    padding: 0px;
+}
+.container-fluid{
+    padding: 0 !important; 
+}
+div.social-container .nav>li{
+    float:left;
+}
+
+.fa {
+    color: #fff;
+}
+.nav > li.facebook > a:hover {
+    background: #3b5998 !important;
+}
+.nav > li.twitter > a:hover {
+    background: #55acee !important;
+}
+.nav > li.linkedin > a:hover {
+    background: #0077b5 !important;
+}
+.fullh{
+    height:100%;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    top:45%;
+    z-index: 999;
+    left: 47%
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+.val-msg{
+    margin-bottom: 12px;
+    margin-top: -3px;
+}
+.chatbox{
+    padding: 0px !important;
+    margin: 0px !important;
+    position:absolute !important;
+    height: 94%;
+    border-left:1px solid #CCC;
+    right: 0px;
+}
+.userbox{
+    padding: 0px !important;
+    margin: 0px !important;
+    position:absolute !important;
+    height: 94%;
+    overflow-y: auto;
+}
+.panel-info {
+    height: 97%;
+}
+.panel-footer {
+    position: fixed;
+    bottom: 0px;
+}
+
+.tes{
+    overflow-y: auto;
+    height: 90%;
+}
+body{
+    overflow: hidden;
+}
