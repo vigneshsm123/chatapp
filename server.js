@@ -17,7 +17,7 @@ app.use('/bower_components', express.static(path.join(__dirname, 'bower_componen
 app.use('/public', express.static(path.join(__dirname, 'public')));
 app.use('/api',appRoutes);
 
-mongoose.connect('mongodb://localhost:27017/tutorial',function(err){
+mongoose.connect('mongodb://example:example@ds053312.mongolab.com:53312/tutorial',function(err){
     if(err)         //check connection
         console.log('Not connected to mongodb');
      else
