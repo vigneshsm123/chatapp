@@ -9,7 +9,7 @@ angular.module('myAppRouter', ['ui.router'])
             })   
             .state('register', {
                 url: '/register',
-                templateUrl: 'public/app/modules/register/register.html',
+                templateUrl: 'public/app/modules/Register/register.html',
                 authenticated: false,
             }) 
             .state('home', {
